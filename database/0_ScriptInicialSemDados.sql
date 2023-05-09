@@ -59,3 +59,5 @@ CREATE TABLE PALAVRADESTAQUE (
 										 or PADPRIORIDADE=8
 										 or PADPRIORIDADE=13)
 )
+
+insert LIVRO(LIVNOME, LIVAUTOR) values ('Vidas Secas', 'Graciliano Ramos')

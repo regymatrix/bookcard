@@ -28,7 +28,7 @@ Insert CARDTEXTO (CARTEXTO,CAPID) values (
 	  Fazia horas que procuravam uma sombra. A folhagem dos juazeiros apareceu 
 	  longe, através dos galhos pelados da catinga rala',
 	1)
-select * from CARDTEXTO
+--select * from CARDTEXTO
 
 
 

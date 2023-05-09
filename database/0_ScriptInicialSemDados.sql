@@ -6,6 +6,7 @@ Create database BDBookCard
 go
 use  BDBookCard
 go
+select * from CAPITULO
 Create table LIVRO(
   LIVID int identity(1,1) not null primary key,
   LIVNOME varchar(100)

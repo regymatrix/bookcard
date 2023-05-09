@@ -1,17 +1,16 @@
 use master
 go
-drop database   BDBookCard
 go
 Create database BDBookCard
 go
 use  BDBookCard
 go
-Create table LIVRO(
+Create table Livro(
   LIVID int identity(1,1) not null primary key,
   LIVNOME varchar(100)
 )
 go
-Create table CAPITULO(
+Create table Capitulo(
   CAPID int identity(1,1) not null primary key,
   CAPDESCRICAO varchar(100) not null,
   LIVID int not null FOREIGN KEY REFERENCES LIVRO(LIVID)

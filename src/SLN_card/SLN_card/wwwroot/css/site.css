@@ -1,0 +1,96 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+#divBody {
+    display: flex;
+    flex-direction: row;
+}
+
+#divEsquerda {
+    width: 25%;
+    height: 650px;
+    padding: 40px 10px 10px 10px;
+}
+
+#divDireita{
+    width: 75%;
+    height: 650px;
+    border-radius: 60px;
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column
+}
+
+.secoesBody{
+    background-color: greenyellow; 
+    margin: 2px 2px 2px 2px;
+}
+
+.itemCard{
+    background-color: white;
+    margin: 2px 2px 2px 2px;
+    align-content: end;
+}
+
+#cabecalhoCard {
+    height: 100%;
+}
+
+#textoCard {
+    height: 80%;
+}
+
+#rodapeCard {
+    display: flex;
+    align-content: space-between;
+    height: 10%;
+    padding-left: 50px;
+
+    padding-right: 50px;
+    width: 100%;
+}
+
+.botoesNavegar {
+    height: 60px;
+    width: 60px;
+}
+
+#rodapeEsquerda {
+    width: 25%;
+}
+
+#rodapeCentro {
+    width: 50%;
+}
+
+#rodapeDireira {
+    display: flex;
+
+    width: 25%;
+}

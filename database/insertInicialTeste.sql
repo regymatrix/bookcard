@@ -1,3 +1,4 @@
+
 use BDBookCard
 go
 Insert Livro (LIVNOME, LIVAUTOR) values ('Dom Casmurro', 'Machado de Assis')

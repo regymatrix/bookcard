@@ -1,0 +1,131 @@
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 320px;
+            height: 180px;
+            background-color: aquamarine;
+            opacity: 1;
+            border: grey 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+    </style>
+    <title>Calculadora</title>
+    
+</head>
+<body>
+    <button id="botao" onclick="abrirDiv() ">Abrir Calculadora</button>
+    <div id="cardin" class="card" style=" display: none;">
+
+        <div class="card-body">
+            <div style="font-weight:bold; font-size:16px;">
+                Calculadora          <button style="margin-left: 160px; color:red; background-color:white;" onclick="fecharDiv()">X</button>
+            </div>
+
+            <div>
+                <label>Valor1</label>
+                <input style="margin:5px;" id="txtValor1" />
+            </div>
+            <div>
+                <label>Valor2</label>
+                <input style="margin:5px;" id="txtValor2" />
+            </div>
+
+            <div>
+                <label>Resultado</label>
+                <input style="margin:8px; width:60%;" id="txtResultado" />
+            </div>
+
+            <div id="but1">
+                <button id="btnSomar" onclick="somarValor()">Somar</button>
+                <button id="btnSubtrair" onclick="subtrairValor()">Subtrair</button>
+                <button id="btnMultiplicar" onclick="multiplicarValor()">Multiplicar</button>
+                <button id="btnDividir" onclick="dividirValor()">Dividir</button>
+                <button id="proximo" onclick="proxi()">></button>
+            </div>
+            
+
+            <div id="but2" style="display:none">
+                <button id="anterior" onclick="ante()"><</button>
+                <button id="btnPotencia" onclick="potenciaValor()">Potenciação</button>
+            </div>
+           
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function abrirDiv() {
+        var div = document.getElementById("cardin");
+        var button = document.getElementById("botao");
+        div.style.display = "flex";
+        button.style.display = "none";
+    }
+
+    function fecharDiv() {
+        var div = document.getElementById("cardin");
+        var button = document.getElementById("botao");
+        div.style.display = "none";
+        button.style.display = "flex";
+    }
+    function somarValor() {
+        var valor1 = parseFloat(document.getElementById("txtValor1").value);
+        var valor2 = parseFloat(document.getElementById("txtValor2").value);
+
+        var resultado = valor1 + valor2;
+        document.getElementById("txtResultado").value = resultado;
+
+
+    }
+    function subtrairValor() {
+        var valor1 = parseFloat(document.getElementById("txtValor1").value);
+        var valor2 = parseFloat(document.getElementById("txtValor2").value);
+        var resultado = valor1 - valor2;
+        document.getElementById("txtResultado").value = resultado;
+    }
+    function multiplicarValor() {
+        var valor1 = parseFloat(document.getElementById("txtValor1").value);
+        var valor2 = parseFloat(document.getElementById("txtValor2").value);
+        var resultado = valor1 * valor2;
+        document.getElementById("txtResultado").value = resultado;
+    }
+    function dividirValor() {
+        var valor1 = parseFloat(document.getElementById("txtValor1").value);
+        var valor2 = parseFloat(document.getElementById("txtValor2").value);
+        var resultado = valor1 / valor2;
+        document.getElementById("txtResultado").value = resultado;
+    }
+    function potenciaValor() {
+        var valor1 = parseFloat(document.getElementById("txtValor1").value);
+        var valor2 = parseFloat(document.getElementById("txtValor2").value);
+        var resultado = valor1 ** valor2;
+        document.getElementById("txtResultado").value = resultado;
+
+    }
+        function proxi() {
+
+            var ante = document.getElementById("but1");
+            var proxi = document.getElementById("but2");
+            proxi.style.display = "flex";
+            ante.style.display = "none";
+        }
+
+        function ante() {
+
+            var ante = document.getElementById("but1");
+            var proxi = document.getElementById("but2");
+            proxi.style.display = "none";
+            ante.style.display = "flex";
+        }
+  
+</script>

@@ -1,0 +1,103 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pipipi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            background-color:antiquewhite;
+            
+        }
+        .box {
+       
+       
+            position: absolute;
+            left: 730px;
+            top: 300px;
+            background-color: black;
+            width: 500px;
+            height: 400px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+            margin-left: 50px;  
+
+        }
+
+        .inputs {
+
+            color: white;
+            
+            margin-top: 50px;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 style="color: white; margin-left: 115px; margin-top: 50px;" >Calculadora🤠👌</h1>
+        <div class="inputs">
+
+
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Valor1</span>
+                </div>
+                <input type="text" class="form-control mt-1" id="txtvalor1" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text mt-3" id="inputGroup-sizing-sm">Valor2</span>
+                    </div>
+                    <input type="text" id="txtvalor2" class="form-control mt-3" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-light" onclick="calcular('+')">Somar</button>
+            <button type="button" class="btn btn-light" onclick="calcular('-')">Subtrair</button>
+            <button type="button" class="btn btn-light" onclick="calcular('*')">Multiplicar</button>
+            <button type="button" class="btn btn-light" onclick="calcular('/')">Dividir</button>
+            <button type="button" class="btn btn-light" onclick="calcular('**')">Elevar</button>
+
+            <div style="color: white;" id="resultado">Resultado: </div>
+        </div>
+       
+    </div>
+</body>
+</html>
+
+<script>
+    function calcular(operacao) {
+        var valor1 = parseFloat(document.getElementById("txtvalor1").value);
+        var valor2 = parseFloat(document.getElementById("txtvalor2").value);
+        var resultado = 0;
+        if (operacao == "+") {
+            resultado = valor1 + valor2;
+        } else if (operacao == "-") {
+            resultado = valor1 - valor2;
+        } else if (operacao == "*") {
+            resultado = valor1 * valor2;
+        } else if (operacao == "/") {
+            resultado = valor1 / valor2;
+        } else if (operacao == "**") {
+            resultado = valor1 ** valor2;
+        }
+        document.getElementById("resultado").innerHTML = "Resultado: " + resultado.toFixed(2);
+        console.log(resultado)
+    }
+</script>
+

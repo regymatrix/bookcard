@@ -1,0 +1,70 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+#divBody {
+    display: flex;
+    flex-direction: row;
+}
+
+#divEsquerda {
+    width: 25%;
+    height: 650px;
+    padding: 10px 10px 10px 10px;
+}
+
+#divDireitoCard {
+    display: flex;
+    width: 75%;
+    height: 650px;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+
+.secoesBody {
+    background-color: #ffd800ff;
+    margin: 2px 2px 2px 2px;
+}
+
+.itemCard {
+    background-color: green;
+    margin: 2px 2px 2px 2px;
+}
+
+#cabecalhoDard {
+    height: 10%;
+}
+
+#textCard {
+    height: 80%;
+}
+
+#rodapeCard {
+    height: 10%;
+}
+
+.material-symbols-outlined {
+    margin-left: 100px;
+}
+

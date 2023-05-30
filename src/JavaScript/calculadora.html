@@ -37,7 +37,6 @@
 
         }
 
-
     </style>
 </head>
 <body>
@@ -74,6 +73,8 @@
             <button type="button" class="btn btn-light" onclick="calcular('**')">Elevar</button>
 
             <div style="color: white;" id="resultado">Resultado: </div>
+            <div style="color: white;" id="baboelegal"></div>
+          
         </div>
        
     </div>
@@ -97,7 +98,20 @@
             resultado = valor1 ** valor2;
         }
         document.getElementById("resultado").innerHTML = "Resultado: " + resultado.toFixed(2);
-        console.log(resultado)
+        
+        console.log(resultado) 
+
+        if (resultado != resultado) {
+            document.getElementById("baboelegal").innerHTML = "Calculo com Digitos errados!"
+            
+        }else{
+
+            document.getElementById("baboelegal").innerHTML = "Calculo Realizado Com Sucesso!"
+            
+
+        }
     }
+
+
 </script>
 
